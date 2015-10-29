@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Bus Ticket</string>
+    <string name="action_settings">Settings</string>
+   <string name="country_prompt">Choose a country</string>
+   <string name="From:">From:</string>
+   <string name="To:">To:</string>
+   <string name="Submit">Submit</string>
+   <string name="date_label_set">Press the button to set the date</string>
+   <string name="date_button_set">Set Date</string>
+   <string name="date_view_set">The Date is: </string>
+   <string name="date_selected"></string>
+
+    <string-array name="ddlSource">
+        
+         <item>----</item>
+        <item>Dhaka</item>
+        <item>Khulna</item>
+        <item>Sylhet</item>
+        <item>Chittagong</item>
+    </string-array>
+    
+    <string-array name="ddlDestination">
+        
+        <item>----</item>
+        <item>Dhaka</item>
+        <item>Khulna</item>
+        <item>Sylhet</item>
+        <item>Chittagong</item>
+    </string-array>
+</resources>

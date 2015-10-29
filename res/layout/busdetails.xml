@@ -1,0 +1,65 @@
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id ="@+id/busdetails"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="match_parent">
+  
+    <!--  This is for bus route -->
+    
+    <RelativeLayout
+        android:id="@+id/details"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#ff0000"
+        android:gravity="center" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Bus Name  |  Coach No. |   Time   |  Fair"
+            android:textColor="#000"
+            android:textSize="20sp" />
+    </RelativeLayout>
+  
+        <Button
+            android:id="@+id/buslead"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#FC9"
+            android:gravity="left" 
+            android:text="Hanif(Non-AC)  H-210      9:00 am  650"
+            android:textColor="#000"
+            android:textSize="20sp" />
+   
+    
+    <!--  This header show time -->
+    
+     
+
+        <Button
+            android:id="@+id/busgead"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Hanif(AC)          H-610    10:00 am  1150"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:background="#20b2aa"
+            android:gravity="left"  />
+        
+        <Button
+            android:id="@+id/buspead"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Hanif(Volvo)      H-3220    8:00 pm 1400"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:background="#f27d0c"
+            android:gravity="left"  />
+        
+
+      
+
+</LinearLayout>
