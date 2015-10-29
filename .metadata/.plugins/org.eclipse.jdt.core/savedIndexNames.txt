@@ -1,0 +1,2 @@
+INDEX VERSION 1.126+M:\Gitpath\BustApp\.metadata\.plugins\org.eclipse.jdt.core
+2822273349.index

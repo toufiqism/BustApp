@@ -1,11 +1,15 @@
 package com.example.busticket;
 
+import com.example.storage.Constants;
 import com.example.storage.Storage;
-
+//http://stackoverflow.com/questions/16352404/store-retrieve-button-state-using-shared-preference
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -20,6 +24,7 @@ public class BusSeat extends Activity {
 			btn21, btn22, btn23, btn24, btn25, btn26, btn27, btn28, go;
 	TextView selectseat, fair;
 	int count = 1;
+	SharedPreferences preferences;
 
 	// String cost="";
 
@@ -27,6 +32,9 @@ public class BusSeat extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.busseat);
+		preferences = PreferenceManager
+				.getDefaultSharedPreferences(BusSeat.this);
+		load();
 		selectseat = (TextView) findViewById(R.id.seatselect);
 		fair = (TextView) findViewById(R.id.fair);
 		go = (Button) findViewById(R.id.go);
@@ -68,6 +76,14 @@ public class BusSeat extends Activity {
 				btn1.setBackgroundColor(Color.GREEN);
 				btn1.setEnabled(false);
 				count++;
+
+				Editor edit = preferences.edit();
+				edit.putString(Constants.ButtonDataA1, "A1"); // when clicking
+																// News Button
+				// edit.putString("which_list", "DATA"); // when clicking Data
+				// Button
+				edit.commit();
+
 			}
 		});
 		btn2.setOnClickListener(new View.OnClickListener() {
@@ -79,6 +95,12 @@ public class BusSeat extends Activity {
 				btn2.setBackgroundColor(Color.GREEN);
 				btn2.setEnabled(false);
 				count++;
+				Editor edit = preferences.edit();
+				edit.putString(Constants.ButtonDataA2, "A2"); // when clicking
+																// News Button
+				// edit.putString("which_list", "DATA"); // when clicking Data
+				// Button
+				edit.commit();
 			}
 		});
 		btn3.setOnClickListener(new View.OnClickListener() {
@@ -394,6 +416,38 @@ public class BusSeat extends Activity {
 			}
 		});
 
+	}
+
+	private void load() {
+		// TODO Auto-generated method stub
+		if (Constants.ButtonDataA1.equals("A1")) {
+			
+			btn1.setBackgroundColor(Color.GREEN);
+		} else if (Constants.ButtonDataA2.equals("A2"))
+		{
+			btn2.setBackgroundColor(Color.GREEN);
+		}
+		else {
+			
+		}
+	}
+
+	@Override
+	protected void onRestart() {
+		// TODO Auto-generated method stub
+		super.onRestart();
+	}
+
+	@Override
+	protected void onResume() {
+		// TODO Auto-generated method stub
+		super.onResume();
+	}
+
+	@Override
+	protected void onPause() {
+		// TODO Auto-generated method stub
+		super.onPause();
 	}
 
 }
